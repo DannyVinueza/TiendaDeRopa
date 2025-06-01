@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover the latest trends in fashion for 
+        women and men at SA FashionStyle. Shop our wide selection of clothes, bags,
+        jewelry, and more. Elevate your style with our curated collections.">
+        <meta name="keywords" content="clothes, women, men, fashion, bags, jewelry, SA FashionStyle, latest trends, stylish clothing, accessories">
+        <meta name="author" content="SA_FashionStyle">
+        <link rel="icon" href="images/logowhite.jpg" type="image/x-icon">
+        <!-- css -->
+        <link rel="stylesheet" href="Style/login.css">
+        <link rel="stylesheet" href="Style/main.css">
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- icon -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <title>SA__FashionStyle</title>
+    </head>
+<body>
+    <header class="container" id="header">
+        <div class="header_top">
+              <div class="header_social">
+                <a href="https://www.instagram.com" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            
+              </div>
+              <img src="images/logo_block.jpg" alt="page logo" id="logo">
+              <div class="header_actions">
+                <div id="display_login">
+                  <span id="user_name">Amira</span>
+                  <a href="#" id="logout" title="Logout" onclick="logout();">
+                   <ion-icon name="log-out-outline"></ion-icon>
+                  </a>
+                </div>
+                <a href="login.html" title="Login" id="login_btn">
+                 <ion-icon name="person-circle-outline"></ion-icon>
+                </a>
+                <a href="#" class="icon-cart">
+                  <ion-icon name="cart-outline"></ion-icon>
+                  <span id="cart-counter">0</span>
+                </a>
+           </div>
+        </div>
+        <nav>
+            <menu>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Productos</a></li>
+                
+                </ul>
+            </menu>
+        </nav>
+    </header>
+    <section id="login">
+       <div class="container">
+        <h1 class="section-header">Login</h1>
+        <div id="form">
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="Email" id="email" onblur="validationEmail();">
+            <span id="invalidEmail" class="alert">Email no valido</span>
+            <label for="password">Contraseña</label>
+            <input type="password" name="Password" placeholder="Password" id="password" onblur="validPassword();">
+            <span id="invalidPass" class="alert">Password must be 8 chars at least</span>
+            <label for="confirmPassword">Confirmar contraseña</label>
+            <input type="password" name="confirmPassword" 
+            placeholder="Confirm Password" 
+            id="confirmPassword" 
+            onblur="validConfirmPassword();">
+            <span id="invalidConfirmPass" class="alert">Password Not Match</span>
+            <div class="submit">
+                <button id="btn-login">Ingresar</button> 
+                <a href="signup.html" id="signup"> ¿Eres nuevo cliente? Crea una cuenta.</a>
+            </div>  
+        </div>
+       </div>
+        
+    </section>
+    <button id="scrollBtn"><ion-icon name="arrow-up-outline" id="btn-up"></ion-icon></button>
+     <!-- cart -->
+    <div class="cart-section">
+        <div class="cart-header">
+            <h2>SHOPPING CART</h2>
+            <div class="closeCart">
+                <ion-icon name="close-outline" id="closeCart"></ion-icon>
+            </div>
+        </div>
+        <div class="cart_products">
+              <!-- add cart products in js -->
+        </div>
+        <div class="cart_total">
+            <h3>Total:</h3>
+            <span id="total_price"></span>
+        </div>
+        <div class="btn_control">
+            <button class="viewCart" onclick="viewCart();">Ver carrito</button>
+            <button class="checkout" onclick="checkOut();">Finalizar compra</button>
+        </div>
+    </div>
+    <footer class="footer black-footer">
+        <div class="footer-top">
+           <div class="footer-logo">
+               <img src="images/logo_block.jpg" alt="logo" width="140">
+               <p>.</p>
+           </div>
+           <div class="footer-list">
+               <div class="list">
+                   <h4>SHOPPING</h4>
+                   <ul>
+                       <li><a href="#">Tienda de zapatos</a></li>
+                       <li><a href="#">Tienda de ropa</a></li>
+                       <li><a href="#">Accessorios</a></li>
+                       <li><a href="#">Ofertas</a></li>
+                   </ul>
+               </div>
+               
+   
+           </div>
+        </div>
+      
+    </footer>
+    <script src="JavaScript/main.js"></script>
+   <script src="JavaScript/validation.js"></script>
+   <script src="JavaScript/cart.js"></script>
+</body>
+</html>
